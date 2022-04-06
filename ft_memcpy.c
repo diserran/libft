@@ -6,7 +6,7 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 17:42:03 by diserran          #+#    #+#             */
-/*   Updated: 2022/03/30 18:14:02 by diserran         ###   ########.fr       */
+/*   Updated: 2022/04/06 18:41:09 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	if ((dst == src) || n == 0)
 		return (dst);
 	if (!dst && !src)
-		return (0);
+		return (NULL);
 	dstf = (unsigned char *)dst;
 	srcf = (const char *)src;
 	while (i < n)

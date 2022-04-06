@@ -6,7 +6,7 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 18:48:08 by diserran          #+#    #+#             */
-/*   Updated: 2022/03/30 19:35:37 by diserran         ###   ########.fr       */
+/*   Updated: 2022/04/06 18:42:39 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strrchr(const char *s, int c)
 			i++;
 		}
 	}
-	return (0);
+	return (NULL);
 }
 
 /* char	*ft_strrchr(const char *s, int c)
