@@ -5,9 +5,8 @@
 
 int	main(void)
 {
-	char txt[] = "test2";
-	char txt2[] = "es";
+	char * empty = (char*)"";
 
-	printf("Resultado: %s\n", strnstr(txt, txt2, 3));
+	printf("Resultado: %s\n", strnstr(empty, "coucou", -1));
 	return (0);
 }

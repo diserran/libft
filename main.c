@@ -4,10 +4,11 @@
 
 int	main(void)
 {
-	//char dest[20];
-	//char src[] = "lorem ipsum dolor sit amet";
-	char *dest = (char*)"";
+	char	s1[] = "Helloff";
+	char	s2[] = "Worldjdkfjkdljfldjf";
+	/* char	s1[] = "lorem ipsum";
+	char	s2[] = "dolor sit amet"; */
 
-	printf("Resultado: %s\n", ft_strnstr(dest, "coucou", -1));
+	printf("Resultado: %s\n", ft_strjoin(s1, s2));
 	return (0);
 }
