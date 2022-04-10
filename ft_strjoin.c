@@ -6,33 +6,35 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:40:53 by diserran          #+#    #+#             */
-/*   Updated: 2022/04/10 19:22:39 by diserran         ###   ########.fr       */
+/*   Updated: 2022/04/10 22:58:53 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	//char	*str;
-	char	*strjoin;
+	char	*str;
+	int		len_s1;
+	int		i;
 	size_t	strlen;
 
-	/* if (!s1 && !s2)
+	i = 0;
+	len_s1 = ft_strlen(s1);
+	strlen = len_s1 + ft_strlen(s2);
+	str = malloc(sizeof(*s1) * (strlen + 1));
+	while (s1[i])
 	{
-		str = (char *)malloc(1);
-		*str = '\0';
-		return (str);
-	} */
-	strlen = ft_strlen(s1) + ft_strlen(s2);
-	/* printf("Tamaño s1: %zu\t", ft_strlen(s1));
-	printf("Tamaño s2: %zu\t", ft_strlen(s2));
-	printf("Tamaño total: %zu\n", strlen); */
-	strjoin = (char *)s1;
-	ft_strlcat(strjoin, (char *)s2, (strlen + 1));
-	printf("Antes de malloc: %s\n", strjoin);
-	//str = malloc(sizeof(*s1) * (strlen + 1));
-	//ft_strlcpy(str, strjoin, (strlen + 1));
-	return (strjoin);
+		str[i] = s1[i];
+		i++;
+	}
+	i = 0;
+	while (s2[i])
+	{
+		str[len_s1] = s2[i];
+		i++;
+		len_s1++;
+	}
+	str[len_s1] = '\0';
+	return (str);
 }
