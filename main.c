@@ -4,11 +4,9 @@
 
 int	main(void)
 {
-	char	s1[] = "Helloff";
-	char	s2[] = "Worldjdkfjkdljfldjf";
-	/* char	s1[] = "lorem ipsum";
-	char	s2[] = "dolor sit amet"; */
+	char const	*s = "lorem ipsum dolor sit amet";
+	char const	*set = "telo";
 
-	printf("Resultado: %s\n", ft_strjoin(s1, s2));
+	printf("%s", ft_strtrim(s, set));
 	return (0);
 }

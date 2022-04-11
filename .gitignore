@@ -1,0 +1,7 @@
+.vscode
+libft-war-machine
+libftTester
+libft
+.DS_store
+objs/
+a.out

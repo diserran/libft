@@ -6,7 +6,7 @@
 #    By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 13:10:45 by diserran          #+#    #+#              #
-#    Updated: 2022/04/10 19:02:25 by diserran         ###   ########.fr        #
+#    Updated: 2022/04/11 16:24:37 by diserran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ SRCS =	ft_isalpha.c 	\
 		ft_calloc.c		\
 		ft_strdup.c		\
 		ft_substr.c		\
-		ft_strjoin.c
+		ft_strjoin.c	\
+		ft_strtrim.c
 
 
 NAME = libft.a
