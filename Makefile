@@ -6,7 +6,7 @@
 #    By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 13:10:45 by diserran          #+#    #+#              #
-#    Updated: 2022/04/13 18:41:12 by diserran         ###   ########.fr        #
+#    Updated: 2022/04/13 18:44:53 by diserran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,8 @@ SRCS =	ft_isalpha.c 	\
 		ft_itoa.c		\
 		ft_strmapi.c	\
 		ft_striteri.c	\
-		ft_putchar_fd.c
+		ft_putchar_fd.c	\
+		ft_putstr_fd.c
 
 
 NAME = libft.a
