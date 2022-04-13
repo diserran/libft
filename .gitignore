@@ -2,6 +2,7 @@
 libft-war-machine
 libftTester
 libft
-.DS_store
+.DS_Store
 objs/
 a.out
+a.out.dSYM
