@@ -6,7 +6,7 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:40:53 by diserran          #+#    #+#             */
-/*   Updated: 2022/04/13 17:45:36 by diserran         ###   ########.fr       */
+/*   Updated: 2022/04/15 14:17:23 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*str;
 	int		len_s1;
 	int		i;
-	size_t	strlen;
 
+	if (!s1 || !s2)
+		return (NULL);
 	i = 0;
 	len_s1 = ft_strlen(s1);
-	strlen = len_s1 + ft_strlen(s2);
-	str = malloc(sizeof(*s1) * (strlen + 1));
+	str = malloc(sizeof(*s1) * ((len_s1 + ft_strlen(s2)) + 1));
+	if (!str)
+		return (NULL);
 	while (s1[i])
 	{
 		str[i] = s1[i];
