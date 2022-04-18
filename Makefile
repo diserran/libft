@@ -6,7 +6,7 @@
 #    By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 13:10:45 by diserran          #+#    #+#              #
-#    Updated: 2022/04/13 18:57:23 by diserran         ###   ########.fr        #
+#    Updated: 2022/04/18 18:12:58 by diserran         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ SRCS =	ft_isalpha.c 	\
 		ft_substr.c		\
 		ft_strjoin.c	\
 		ft_strtrim.c	\
+		ft_split.c		\
 		ft_itoa.c		\
 		ft_strmapi.c	\
 		ft_striteri.c	\
@@ -44,12 +45,24 @@ SRCS =	ft_isalpha.c 	\
 		ft_putendl_fd.c	\
 		ft_putnbr_fd.c
 
+SRCSB =	ft_lstnew_bonus.c	\
+		ft_lstadd_front_bonus.c	\
+		ft_lstsize_bonus.c		\
+		ft_lstlast_bonus.c		\
+		ft_lstadd_back_bonus.c	\
+		ft_lstdelone_bonus.c	\
+		ft_lstclear_bonus.c		\
+		ft_lstiter_bonus.c		\
+		ft_lstmap_bonus.c
 
 NAME = libft.a
 
 OBJS_DIR = objs/
 OBJS = $(SRCS:.c=.o)
 OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
+
+OBJSB = $(SRCSB:.c=.o)
+OBJECTS_BONUS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJSB))
 
 CC = clang
 
@@ -73,3 +86,7 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(OBJECTS_BONUS_PREFIXED)
+	@ar r $(NAME) $(OBJECTS_BONUS_PREFIXED)
+	@echo "Libft Bonus Done !"

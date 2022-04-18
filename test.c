@@ -5,14 +5,9 @@
 
 int	main(void)
 {
-	int	i = 0;
-	char s1[] = "Hola Mundo!";
+	char s1[] = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+	char c[] = "o";
 
-	while (s1[i++])
-	{
-		printf("String: %c\t", s1[i]);
-		printf("Index: %d\n", i);
-		//i++;
-	}
+	printf("Resultado: %d\n", ft_countwords(s1, c));
 	return (0);
 }
