@@ -1,9 +1,4 @@
 .vscode
-libft-war-machine
-libftTester
-libft
+.gitignore
 .DS_Store
-objs/
-a.out
-a.out.dSYM
-FT_SPLIT_TESTER/
+intra-uuid-20786d04-a3ce-4bb8-8079-3ede2ce2b450-4070515-diserran

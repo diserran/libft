@@ -6,7 +6,7 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:57:00 by diserran          #+#    #+#             */
-/*   Updated: 2022/04/13 18:18:34 by diserran         ###   ########.fr       */
+/*   Updated: 2022/04/19 12:01:16 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*tmp;
 
-	tmp = malloc(sizeof(size) * count);
+	tmp = malloc(size * count);
 	if (!tmp)
 		return (NULL);
 	ft_bzero(tmp, (count * size));

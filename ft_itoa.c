@@ -6,13 +6,13 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 12:02:40 by diserran          #+#    #+#             */
-/*   Updated: 2022/04/18 18:25:07 by diserran         ###   ########.fr       */
+/*   Updated: 2022/04/19 12:16:42 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	getnumsize(int n)
+static int	ft_getnumsize(int n)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ static int	getnumsize(int n)
 	return (i);
 }
 
-static char	*convertnumber(int n, int numlen, char *str)
+static char	*ft_convertnumber(int n, int numlen, char *str)
 {
 	int	mod;
 
@@ -56,7 +56,7 @@ char	*ft_itoa(int n)
 	int		numlen;
 	char	*str;
 
-	numlen = getnumsize(n);
+	numlen = ft_getnumsize(n);
 	str = (char *)malloc(sizeof(char) * (numlen + 1));
 	if (!str)
 		return (NULL);
@@ -72,6 +72,6 @@ char	*ft_itoa(int n)
 		return (str);
 	}
 	else
-		return (convertnumber(n, numlen, str));
+		return (ft_convertnumber(n, numlen, str));
 	return (NULL);
 }
