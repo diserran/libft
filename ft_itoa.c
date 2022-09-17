@@ -6,7 +6,7 @@
 /*   By: diserran <diserran@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/12 12:02:40 by diserran          #+#    #+#             */
-/*   Updated: 2022/04/19 12:16:42 by diserran         ###   ########.fr       */
+/*   Updated: 2022/09/17 17:57:07 by diserran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,6 @@ static int	ft_getnumsize(int n)
 
 static char	*ft_convertnumber(int n, int numlen, char *str)
 {
-	int	mod;
-
 	if (n < 0)
 	{
 		str[0] = '-';
@@ -44,8 +42,7 @@ static char	*ft_convertnumber(int n, int numlen, char *str)
 	str[numlen] = '\0';
 	while (n > 0)
 	{
-		mod = n % 10;
-		str[--numlen] = mod + '0';
+		str[--numlen] = (n % 10) + '0';
 		n = n / 10;
 	}
 	return (str);
